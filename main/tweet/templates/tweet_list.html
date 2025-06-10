@@ -1,4 +1,5 @@
-{% extends "layout.html" %} {% block title %} My first django project 
+{% extends "layout.html" %} 
+{% block title %} My first django project 
 {% endblock %} 
 {% block content %}
 <h1 class="text-center mt-4">Welcome to my first django project</h1>
@@ -27,6 +28,7 @@
       <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
         {{tweet.text}}
       </p>
+      {% if tweet.user == user %}
       <div class="flex gap-5">
         <a
           href="{% url 'tweet_edit' tweet.id %}"
@@ -42,6 +44,7 @@
           Delete
         </a>
       </div>
+      {% endif %}
     </div>
   </div>
 
