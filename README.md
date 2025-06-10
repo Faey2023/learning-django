@@ -37,5 +37,6 @@
 6. **Run the development server:**
 
    ```bash
+   cd main
    python manage.py runserver
    ```
